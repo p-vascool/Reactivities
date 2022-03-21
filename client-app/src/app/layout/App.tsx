@@ -5,6 +5,9 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import LoadingComponent from './LoadingComponent';
 import { useStore } from '../stores/store';
 import { observer } from 'mobx-react-lite';
+import { Route } from 'react-router-dom';
+import HomePage from '../../features/home/HomePage';
+import ActivityForm from '../../features/activities/form/ActivityForm';
 
 function App() {
   const { activityStore } = useStore();
@@ -19,7 +22,9 @@ function App() {
     <>
       <NavBar/>
       <Container style={{ marginTop: '5em' }}>
-        <ActivityDashboard />
+        <Route  path='/' element={HomePage}/>
+        <Route  path='/activities' element={ActivityDashboard}/>
+        <Route  path='/createActivity' element={ActivityForm}/>
       </Container>
 
     </>
