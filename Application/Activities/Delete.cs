@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Activities
 {
-    public class Delete 
+    public class Delete
     {
         public class Command : IRequest
         {
